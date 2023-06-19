@@ -41,6 +41,14 @@ function get_num_respostas(id_pergunta) {
   return resultado['count(*)'];
 }
 
+function editar_pergunta(id, texto) {
+  repositorio.editar_pergunta(id, texto);
+}
+
+function remover_pergunta(id_pergunta) {
+  repositorio.remover_pergunta(id_pergunta);
+}
+
 exports.reconfig_bd = reconfig_bd;
 exports.listar_perguntas = listar_perguntas;
 exports.cadastrar_pergunta = cadastrar_pergunta;
@@ -48,3 +56,5 @@ exports.cadastrar_resposta = cadastrar_resposta;
 exports.get_pergunta = get_pergunta;
 exports.get_respostas = get_respostas;
 exports.get_num_respostas = get_num_respostas;
+exports.editar_pergunta = editar_pergunta;
+exports.remover_pergunta = remover_pergunta;RepositorioDB.js
